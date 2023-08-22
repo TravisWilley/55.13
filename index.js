@@ -2,19 +2,19 @@ let myhttp = require('http');
 
 
 let myserver = myhttp.createServer(
-  function( myrequest, myresponse ) {
-    console.log( myrequest.url );
+  function(myrequest, myresponse) {
+    console.log(myrequest.url);
 
     let mytext;
-    if ( myrequest.url === "/sup" ) {
-      mytext = "Whats up buddy..";
+    if (myrequest.url === "/sup") {
+      mytext = "Whats up buddy...";
     } else {
       mytext = "I don't know you!";
     }
 
-    myresponse.writeHead( 200, { "Content-Type": "text/plain" } );
+    myresponse.writeHead(200, { "Content-Type": "text/plain" });
 
-    myresponse.end( mytext );
+    myresponse.end(mytext);
   }
 );
 
